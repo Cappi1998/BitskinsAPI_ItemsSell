@@ -99,10 +99,13 @@ namespace BitskinsAPI_ItemsSell
 
                     foreach (var item in inventory.data.steam_inventory.items)
                     {
+                        
                         if (item.market_hash_name == ItemNameToSell)
                         {
                             SellItens(item.asset_ids);
                         }
+                        Console.Write("Thread Sleep 20 seconds..");
+                        Thread.Sleep(TimeSpan.FromSeconds(20));
                     }
                 }
             }
